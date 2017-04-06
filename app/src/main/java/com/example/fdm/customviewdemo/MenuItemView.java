@@ -14,19 +14,19 @@ import android.widget.TextView;
  * Created by fdm on 2017/4/2.
  */
 
-public class MenuItem extends RelativeLayout {
+public class MenuItemView extends RelativeLayout {
 
     ImageView iconLeft;
     ImageView iconRight;
     TextView menuTextRight;
     TextView menuTextLeft;
 
-    public MenuItem(Context context, AttributeSet attrs) {
+    public MenuItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public MenuItem(Context context, AttributeSet attrs, int defStyleAttr) {
+    public MenuItemView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
@@ -63,20 +63,20 @@ public class MenuItem extends RelativeLayout {
 
     }
 
-    public void setMenuTextRight(String text) {
-        menuTextRight.setText(text);
-    }
-
     public CharSequence getMenuTextRight() {
         return menuTextRight.getText();
     }
 
-    public void setMenuTextLeft(String text) {
-        menuTextLeft.setText(text);
+    public void setMenuTextRight(String text) {
+        menuTextRight.setText(text);
     }
 
     public CharSequence getMenuTextLeft() {
         return menuTextLeft.getText();
+    }
+
+    public void setMenuTextLeft(String text) {
+        menuTextLeft.setText(text);
     }
 
     public <T extends View> T getView(int id) {

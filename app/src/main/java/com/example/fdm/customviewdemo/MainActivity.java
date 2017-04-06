@@ -7,24 +7,24 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    MenuItem menuItem;
-    MenuItem menuItem1;
-    MenuItem menuItem2;
+    MenuItemView menuItemView;
+    MenuItemView menuItemView1;
+    MenuItemView menuItemView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        menuItem = getView(R.id.menu);
-        menuItem1 = getView(R.id.menu1);
-        menuItem2 = getView(R.id.menu2);
-        menuItem.setOnClickListener(this);
-        menuItem1.setOnClickListener(this);
-        menuItem2.setOnClickListener(this);
+        menuItemView = getView(R.id.menu);
+        menuItemView1 = getView(R.id.menu1);
+        menuItemView2 = getView(R.id.menu2);
+        menuItemView.setOnClickListener(this);
+        menuItemView1.setOnClickListener(this);
+        menuItemView2.setOnClickListener(this);
 
-        menuItem1.setMenuTextRight("0.00元");
-        menuItem2.setMenuTextRight("古铜色会员");
+        menuItemView1.setMenuTextRight("0.00元");
+        menuItemView2.setMenuTextRight("古铜色会员");
     }
 
     public <T extends View> T getView(int id) {
